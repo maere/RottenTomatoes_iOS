@@ -9,6 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var textLabel: UILabel!
+   
+    @IBOutlet weak var textField: UITextField!
+
+
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +27,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func didTapUpdate(sender: UIButton) {
+        //this is to swap text in field to lable
+        
+        let currentText = self.textField.text
+        self.textLabel.text = currentText
+        
+        
+        //this is to debug
+        NSLog("Did Tap Update button")
+    }
 
 }
 
